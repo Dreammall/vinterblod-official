@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #0d0d0d;
+  background-size: 100% auto;
+  color: #ccc;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 左右の背景共通 */
+.side-bg {
+  position: absolute;
+  top: 0;
+  background-image: url('/images/background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: -1;
+  pointer-events: none; /* 背景がクリックを邪魔しないように */
+  width: 300px; 
+}
+
+/* 左端に配置 */
+.side-bg.left {
+  left: 0;
+}
+
+/* 右端に配置＋反転 */
+.side-bg.right {
+  right: 0;
+  transform: scaleX(-1); /* 左右反転 */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  width: 90%; /* PCのロゴサイズ（元サイズ） */
+  margin-top: 30px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 20pt;
+  margin: 30px 0;
+}
+
+h2 {
+  margin: 65px 0 10px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #eee;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #aaa;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 20px 0;
+}
+
+.insta-icon {
+  width: 40px;
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* モバイル用調整 */
+@media screen and (max-width: 767px) {
+  .side-bg {
+    width: 60px; /* モバイルで小さく */
+  }
+
+  .tagline {
+    font-style: italic;
+    font-size: 15pt;
+  }
+
+  .logo {
+    width: 75%; /* モバイルでロゴを小さく */
+    margin-top: 20px;
+  }
+  
+  .member-image {
+    margin-top: 40px;
+  }
+
+}

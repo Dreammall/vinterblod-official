@@ -29,9 +29,8 @@
 
 <body>
   <!-- CSS読み込み -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('resources/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/animation.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/discography.css') }}">
   <link rel="stylesheet" href="{{ asset('css/HBG-menu-style.css') }}">
   <!-- JS読み込み -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
