@@ -25,17 +25,18 @@
 
   <!-- Safariでの表示制御（オプション） -->
   <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- JS,CSS 読み込み -->
+    @vite([
+      'resources/css/style.css',
+      'resources/css/menu-style.css',
+      'resources/css/fade-in.css',
+      'resources/css/app.css',
+      'resources/js/app.js'
+    ])
 </head>
 
 <body>
-  <!-- CSS読み込み -->
-  <link rel="stylesheet" href="{{ asset('resources/css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/animation.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/HBG-menu-style.css') }}">
-  <!-- JS読み込み -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="{{ asset('js/animation.js') }}"></script>
-
   <div class="side-bg left"></div>
   <div class="side-bg right"></div>
   
