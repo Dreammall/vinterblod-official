@@ -1,0 +1,24 @@
+/* body のフェードイン (5秒かけて)*/
+/* 初期状態（非表示） */
+body {
+  opacity: 0;
+  transition: opacity 5.0s ease-in-out 0.3s;
+}
+/* 表示 */
+body.bg-visible {
+  opacity: 1;
+}
+
+/* セクションのフェードイン */
+/* 初期状態（非表示） */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+/* 各セクションに到達する度下から浮かぶように表示 */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
