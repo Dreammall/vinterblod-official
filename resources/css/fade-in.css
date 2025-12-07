@@ -1,11 +1,5 @@
-/* body のフェードイン (5秒かけて)*/
-/* 初期状態（非表示） */
-body {
-  opacity: 0;
-  transition: opacity 5.0s ease-in-out 0.3s;
-}
-/* 表示 */
-body.bg-visible {
+/* body のフェードイン（表示） */
+body.visible {
   opacity: 1;
 }
 
