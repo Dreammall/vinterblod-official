@@ -1,74 +1,84 @@
+
+/* -----------------------------
+    全体の基本スタイル設定
+-----------------------------*/
 body {
   /* フェードイン初期状態 */
   opacity: 0;
   transition: opacity 3.0s ease-in-out 0.3s;
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #0d0d0d;
-  background-size: 100% auto;
-  color: #ccc;
-  text-align: center;
-  position: relative;
-  overflow-x: hidden;
+  /* スタイル設定 */
+  margin: 0; /* 余白なし */
+  font-family: 'IM FELL DW Pica SC', serif; /*フォント指定*/
+  font-style: normal;
+  background-color: #0d0d0d; /*背景色*/
+  color: #ccc; /* 文字色 */
+  text-align: center; /* 文字中央揃え */
+  position: relative; /* 背景画像の位置調整用 */
+  overflow-x: hidden; /* 横(x)スクロールバー非表示 */
 }
 
-/* 左右の背景共通 */
+/* -----------------------------
+    背景スタイル設定
+-----------------------------*/
 .side-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
-  background-image: url('/images/background.webp');
+  width: 250px; 
+  background-image: url('/images/background.webp'); /* 背景画像のパス */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
-  z-index: -1;
-  pointer-events: none; /* 背景がクリックを邪魔しないように */
-  width: 300px; 
+  background-position: center top;
+  pointer-events: none;
+  z-index: -1; /* コンテンツの背面に配置 */
 }
-
 /* 左端に配置 */
 .side-bg.left {
   left: 0;
 }
-
 /* 右端に配置＋反転 */
 .side-bg.right {
   right: 0;
   transform: scaleX(-1); /* 左右反転 */
 }
 
+/* -----------------------------
+    コンテンツエリアスタイル設定
+-----------------------------*/
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 700px; /* コンテナの最大幅 */
+  margin: 0 auto; /* コンテナを中央に配置 */
+  padding: 20px; /* コンテナ内の余白 */
 }
 
-.member-image {
-  width: 90%;
-  margin-top: 50px;
-}
-
+/* バンドロゴ */
 .logo {
   width: 90%; /* PCのロゴサイズ（元サイズ） */
   margin-top: 30px;
 }
 
+/* ライブメンバー写真 */
+.member-image {
+  width: 90%;
+  margin-top: 50px;
+}
+
+/* テーマフレーズ */
 .tagline {
-  font-style: italic;
+  font-family: "UnifrakturMaguntia", serif;
   font-size: 20pt;
   margin: 30px 0;
 }
 
+/* バンド紹介 */
 h2 {
   margin: 65px 0 10px;
   font-weight: normal;
   letter-spacing: 1px;
-  color: #eee;
 }
 
 .link {
   display: inline-block;
   margin-top: 10px;
-  color: #aaa;
   text-decoration: underline;
 }
 
@@ -86,16 +96,19 @@ ul li {
   height: 3%;
 }
 
+/* フッターのスタイル */
 footer {
+  font-family: 'Georgia', serif; /*フォント指定*/
   margin-top: 50px;
   font-size: 0.9em;
   color: #666;
 }
 
-/* モバイル用調整 */
+
+/* モバイル（スマホ）用調整 */
 @media screen and (max-width: 767px) {
   .side-bg {
-    width: 60px; /* モバイルで小さく */
+    width: 60px;
   }
 
   .tagline {
@@ -104,12 +117,11 @@ footer {
   }
 
   .logo {
-    width: 75%; /* モバイルでロゴを小さく */
+    width: 75%;
     margin-top: 20px;
   }
-  
+
   .member-image {
     margin-top: 40px;
   }
-
 }
