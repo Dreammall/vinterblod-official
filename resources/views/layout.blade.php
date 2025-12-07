@@ -26,14 +26,12 @@
   <!-- Safariでの表示制御（オプション） -->
   <meta name="apple-mobile-web-app-capable" content="yes">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
+
   <!-- JS,CSS 読み込み -->
-    @vite([
-      'resources/css/style.css',
-      'resources/css/menu-style.css',
-      'resources/css/fade-in.css',
-      'resources/css/app.css',
-      'resources/js/app.js'
-    ])
+    @vite('resources/js/app.js')
 </head>
 
 <body>

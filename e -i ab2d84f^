@@ -1,0 +1,14 @@
+[33mab2d84f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m style.css 背景画像の参照パスを修正
+[33me943195[m 修正: js,cssの読み込み記述@viteを<body>内ではなく<head>内に移動（ブラウザ描画順が破綻していたため）
+[33m2c3b0d5[m ファイル名変更
+[33m8440ae9[m ファイル名変更
+[33m9ccf1bf[m fade-in-animation.css を追加（bodyや各セクションのフェードインアニメーション用）
+[33m05c26db[m HBGmenu-style.css を追加（ハンバーガーメニューのスタイルを指定する）
+[33mb183472[m style.css の微調整
+[33mc7a38b4[m CSS の背景画像パスを public 配下を参照するように修正
+[33mde94f34[m 画像素材フォルダ（背景・装飾）を追加
+[33m5d4cea9[m 全体レイアウトと共通スタイルを定義する style.css を追加
+[33med39cc1[m 作業: web.php に TOPページのルートを追加
+[33m4c0b4cc[m 作業: TOPページビュー index.blade.php を作成
+[33m01b97a5[m 作業: layout.blade.php 全ページ用の共通レイアウトを追加
+[33m9d288da[m initial commit
