@@ -10,3 +10,6 @@ Route::get('/', fn() => view('static.index'));
 
 //ディスコグラフィー画面
 Route::get('/discography', fn() => view('static.discography'));
+
+//アバウト画面
+Route::get('/about', fn() => view('static.about'));
