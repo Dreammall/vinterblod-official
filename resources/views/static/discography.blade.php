@@ -31,7 +31,7 @@
     <div class="album-listen">
       <img src="{{ asset('images/wolvesofmorke.webp') }}" alt="Wolves of Morke">
       <h2>WOLVES OF MORKE (2022)</h2>
-      <p>Twin howls under the blood moon. This early release carved VINTERBLOD’s name into the frostbitten landscape.</p>
+      <p>Twin howls under the blood moon. This early release carved VINTERBLØD’s name into the frostbitten landscape.</p>
       <p><a href="https://open.spotify.com" target="_blank" style="color: #aaa;">▶ Listen on Spotify</a></p>
     </div>
   </section>
