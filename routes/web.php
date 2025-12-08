@@ -7,3 +7,6 @@ use Illuminate\Support\Facades\Route;
 
 //トップ画面
 Route::get('/', fn() => view('static.index'));
+
+//ディスコグラフィー画面
+Route::get('/discography', fn() => view('static.discography'));
