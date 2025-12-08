@@ -1,0 +1,31 @@
+
+.discography {
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.album-listen {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.album-listen img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.album-listen h2 {
+  font-size: 1.5em;
+  margin-top: 15px;
+}
+
+.album-listen p {
+  font-size: 0.95em;
+  color: #ccc;
+}
