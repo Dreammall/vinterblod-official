@@ -5,11 +5,16 @@
 // Route::get() や Route::post() を使うために必要
 use Illuminate\Support\Facades\Route;
 
-//トップ画面
+// ルーティング
+// Top ページ
 Route::get('/', fn() => view('static.index'));
 
-//ディスコグラフィー画面
+// Discography ページ
 Route::get('/discography', fn() => view('static.discography'));
 
-//アバウト画面
+// About ページ
 Route::get('/about', fn() => view('static.about'));
+
+// Contact ページ
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
