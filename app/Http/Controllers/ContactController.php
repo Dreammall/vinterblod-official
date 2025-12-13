@@ -4,31 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactMail;
 
 class ContactController extends Controller
 {
-    // フォーム表示
-    public function index()
+    public function store(Request $request)
     {
-        return view('contact');
-    }
-
-    // 送信処理
-    public function send(Request $request)
-    {
-        // ① 入力チェック（受付ルール）
+        // バリデーション（最低限）
         $validated = $request->validate([
-            'name'    => 'required|string|max:50',
-            'email'   => 'required|email',
-            'message' => 'required|string|max:1000',
+            'name'    => 'required|max:100',
+            'email'   => 'nullable|email',
+            'subject' => 'nullable|max:255',
+            'message' => 'required|max:5000',
         ]);
 
-        // ② メール送信（伝言係）
-        Mail::to(config('mail.from.address'))
-            ->send(new ContactMail($validated));
+        // メール送信
+        Mail::send('emails.contact', $validated, function ($mail) use ($validated) {
+            $mail->to('aimi6827@gmail.com') // ← 管理者用の受信メールアドレス
+                 ->subject('Contact Form: ' . ($validated['subject'] ?? 'No Subject'));
+        });
 
-        // ③ 完了メッセージ
-        return back()->with('success', 'お問い合わせを送信しました');
+        return back()->with('success', 'Message sent successfully.');
     }
 }
