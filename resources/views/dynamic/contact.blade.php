@@ -20,7 +20,7 @@
 
 @section('contents')
 <!-- お問合せ内容入力フォーム -->
-<form method="POST" action="{{ route('contact.store') }}">
+<form method="POST" action="{{ route('contact.send') }}">
   @csrf
   <input type="text" name="website" value="" style="display:none" tabindex="-1" autocomplete="off">
   <label>Name: <input type="text" name="name" value="{{ old('name') }}" required maxlength="100"></label><br><br> 

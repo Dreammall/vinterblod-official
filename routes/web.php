@@ -4,6 +4,8 @@
 // Laravel のルート定義用のクラス。
 // Route::get() や Route::post() を使うために必要
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+
 
 // ルーティング
 // Top ページ

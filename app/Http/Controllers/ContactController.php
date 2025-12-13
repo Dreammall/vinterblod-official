@@ -7,7 +7,13 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function store(Request $request)
+    // ① フォーム表示 専用
+    public function index(){
+        return view('dynamic.contact');
+    }
+
+    // ② フォーム送信処理 専用
+    public function send(Request $request)
     {
         // バリデーション（最低限）
         $validated = $request->validate([
